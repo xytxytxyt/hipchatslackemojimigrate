@@ -15,9 +15,6 @@ def sUploadEmojis(url, email, password, d='.'):
 
     for emojiFilename in os.listdir(d):
         emojiName, extension = emojiFilename.split('.')
-        if extension != 'png':
-            print '%s extension unsupported' % emojiFilename
-            continue
 
         print 'getting add emoji page... ',
         if not url.endswith('/'): url += '/'
